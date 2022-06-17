@@ -1,0 +1,404 @@
+html {
+    width: 100% !important;
+    height: 100vh;
+}
+
+body {
+    height: 100vh;
+}
+
+.container {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: #F3F5FC;
+}
+
+.copy-notify {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background: #000000;
+    opacity: 93%;
+    z-index: 1;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 120%;
+    color: #dadce1;
+}
+
+.copy-notify p {
+    border: 1px solid #333333;
+    border-radius: 20px;
+    padding: 1%;
+    
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.logo {
+   position: absolute;
+   left: 2%;
+   top: 5%;
+   width:7%;
+   height: 7%;
+}
+
+#textarea-encrypt {
+    position: absolute;
+    width: 30%;
+    height: 300px;
+    left: 17%;
+    top: 20%;
+    resize: none;
+    background-color: transparent;
+    border: none;       
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+    color: #0A3871;
+}
+
+#textarea-encrypt::placeholder {
+    color: #0A3871;
+}
+
+#textarea-encrypt:focus {
+    border: none;
+    overflow: auto; 
+    outline: none; 
+    -webkit-box-shadow: none; 
+    -moz-box-shadow: none; 
+    box-shadow: none; 
+    resize: none;
+}
+
+#right-rectangle {
+    position: absolute;
+    display:flex;
+    justify-content: center;
+    width: 35%;
+    height: 86%;
+    left: 60%;
+    top: 7%;
+    background: #FFFFFF;
+    box-shadow: 0px 6px 28px -18px rgba(0,0,0,0.8);
+    border-radius: 32px;
+}
+
+#not-found img {
+    position: absolute;
+    top: 5%;
+    left: 3%;
+}
+
+#right-rectangle h3 {
+    position: absolute;
+    width: 50%;
+    top: 65%;
+    left:25%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 120%;
+    text-align: center;
+    color: #343A40;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+#right-rectangle p {
+    position: absolute;
+    top: 77%;
+    left: 15%;
+    width: 70%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    text-align: center;
+    color: #495057;
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.left-buttons {
+    position: relative;
+    top: 76%;
+    margin-left: 3%;
+}
+
+.left-buttons p {
+    position: relative;
+    width: 20%;
+    margin-bottom: 1.5em;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 150%;
+    color: #495057;
+    opacity: 0.8;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+#caveat {
+    position: relative;
+    margin-right: 1em;
+    padding: 0px 4px;
+    background: #495057;
+    border-radius:50px;
+    color: #FFFFFF;
+}
+
+#encrypt {
+    width: 18%;
+    height: 50px;
+    background: #0A3871;
+    border-radius: 20px;
+    border:solid 1px #0A3871;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+#decrypt {
+    width: 18%;
+    height: 50px;
+    margin-left:1.5em;
+    background: #D8DFE8;
+    border-radius: 20px;
+    border: solid 1px #0A3871;
+    font-size: 14px;
+    color: #0A3871;
+}
+
+/*hide the image and the paragraph when there is encrypted text*/
+
+.hide-div {
+    display: none;
+}
+
+/*styles for the encrypted text*/
+
+.text-encrypted {
+    position:absolute;
+    width: 85%;
+    height: 75%;
+    top: 5%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    color: #495057;
+    overflow-y: auto;
+}
+
+#btn-copy {
+    position: absolute;
+    width: 18%;
+    height: 50px;
+    left: 68%;
+    background: none;
+    border-radius: 20px;
+    border: solid 1px #0A3871;
+    font-size: 14px;
+    color: #0A3871;
+}
+
+/*
+---------------- Vamos a por el Responsive ----------------------
+*/
+
+@media (max-width:768px) {
+    
+    .logo {
+        height: 15%;
+        width: 15%;
+        left: -1%;
+    }
+
+    #textarea-encrypt {
+        width: 91%;
+        left: 4%;
+        font-size: 32px;
+    }
+    
+    #right-rectangle {
+        top: 80%;
+        height: 15.4%;
+        width: 89.5%;
+        left: 5%;
+    }
+
+    #right-rectangle h3 {
+        top: 24%;
+        left: 4.6%;
+        width: 90%;
+        font-size: 24px;
+    }
+
+    #right-rectangle p {
+        top: 57.8%;
+        font-size: 16px;
+    }
+
+    #not-found img {
+        display: none;
+    }
+
+    .text-encrypted {
+        height: 52%;
+        top: 10%;
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    .left-buttons {
+        top: 65%;
+        margin-left: 5%;
+    }
+
+    .left-buttons p {
+        width: 80%;
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    #caveat {
+        padding: 0 6px;
+    }
+    
+    #encrypt {
+        position: absolute;
+        width: 44.5%;
+        height: 67px;
+        font-size: 16px;
+        line-height: 19px;
+        padding: 0;
+    }
+
+    #decrypt {
+        position: absolute;
+        left: 49%;
+        width: 44.5%;
+        height: 67px;
+        font-size: 16px;
+        line-height: 19px;
+        margin: 0;
+        padding: 0;
+    }
+
+    #btn-copy {
+        position: relative;
+        top: 360px;
+        left: 7%;
+        width: 80%;
+        height: 67px;
+        font-size: 16px;
+        line-height: 19px;
+        border-radius: 25px;
+    }
+}
+
+@media (max-width: 375px) {
+
+    .container {
+        height: 115%;
+    }
+   
+    .logo {
+        height: 24%;
+        width: 24%;
+        top: 2%;
+        left: -5%;
+    }
+
+    #textarea-encrypt {
+        width: 91%;
+        top: 17%;
+        left: 3%;
+        line-height: 48px;
+    }
+    
+    #right-rectangle {
+        top: 77%;
+        height: 19%;
+        width: 89.5%;
+        left: 5%;
+    }
+
+    #right-rectangle h3 {
+        top: 15%;
+        line-height: 28.8px;
+        font-weight: 700;
+    }
+
+    #right-rectangle p {
+        top: 56.8%;
+        line-height: 24px;
+    }
+
+    .text-encrypted {
+        height: 52%;
+        top: 10%;
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    .left-buttons {
+        top: 50%;
+        margin-left: 5%;
+    }
+
+    .left-buttons p {
+        width: 80%;
+        font-size: 12px;
+        line-height: 18px;
+    }
+    
+    #encrypt {
+        display: block;
+        position: relative;
+        width: 95%;
+        height: 67px;
+        font-size: 16px;
+        line-height: 19px;
+        margin-bottom: 6%;
+    }
+
+    #decrypt {
+        display: block;
+        position: relative;
+        left: 0%;
+        width: 95%;
+        height: 67px;
+        font-size: 16px;
+        line-height: 19px;
+        margin: 0;
+        padding: 0;
+    }
+
+    #btn-copy {
+        top: 550px;
+    }
+}
